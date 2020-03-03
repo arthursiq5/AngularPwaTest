@@ -3,7 +3,7 @@ import { Item, ApiService } from './services/api.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
   title = 'PWA';
@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.fetchData();
   }
-  
+
   fetchData() {
     this.apiService.fetch().subscribe(
       (data: Array<Item>) => {
